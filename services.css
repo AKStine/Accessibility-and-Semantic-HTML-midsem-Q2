@@ -1,0 +1,152 @@
+/* USIU–Africa Student Services CSS */
+
+/* 1. General Styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* 2. Header */
+header {
+  background: #003366;
+  color: #ffd100;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+}
+header p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* 3. Navigation */
+nav {
+  background: #ffd100;
+  padding: 1rem 0;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 2rem;
+}
+nav a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover, nav a:focus {
+  background: #003366;
+  color: #ffd100;
+}
+
+/* 4. Main Content */
+main {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 5. Service Sections */
+section {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 2rem 1.5rem;
+}
+section h2 {
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+section p {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+/* 6. Counseling Booking Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+label {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+input, select, textarea {
+  padding: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+button[type="submit"] {
+  background: #003366;
+  color: #ffd100;
+  border: none;
+  border-radius: 22px;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s, color 0.2s;
+}
+button[type="submit"]:hover, button[type="submit"]:focus {
+  background: #ffd100;
+  color: #003366;
+}
+
+/* 7. Aside (Help Box) */
+aside {
+  background: #e3ecfa;
+  color: #003366;
+  border-left: 4px solid #ffd100;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* 8. Footer */
+footer {
+  background: #003366;
+  color: #ffd100;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+  border-radius: 0 0 8px 8px;
+}
+
+/* 9. Responsive Design */
+@media (max-width: 600px) {
+  header, main, section, aside, nav {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  section {
+    padding: 1rem 0.5rem;
+  }
+}

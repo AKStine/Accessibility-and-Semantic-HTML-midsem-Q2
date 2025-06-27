@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USIU–Africa Student Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- No CSS for now, focusing on semantic HTML and accessibility -->
+</head>
+<body>
+  <!-- 
+    <header> is for the page intro/title, so screen readers know what this page is about right away.
+  -->
+  <header>
+    <h1 id="site-title">USIU–Africa Student Services Portal</h1>
+    <p>Access all your essential student services in one place.</p>
+  </header>
+
+  <!-- 
+    <nav> is for navigation. 
+    We use role="navigation" and aria-label for screen readers.
+  -->
+  <nav role="navigation" aria-label="Student Services Navigation">
+    <ul>
+      <li><a href="#fee-payment">Fee Payment</a></li>
+      <li><a href="#counseling-booking">Counseling Booking</a></li>
+      <li><a href="#transcript-request">Transcript Request</a></li>
+    </ul>
+  </nav>
+
+  <!-- 
+    <main> is the main content area.
+    Each service is a <section> with an <article> inside.
+    This makes it easy for screen readers to jump to each part.
+  -->
+  <main aria-labelledby="site-title">
+    <!-- Fee Payment Service -->
+    <section id="fee-payment" aria-labelledby="fee-title">
+      <!-- <article> is used because this is a stand-alone service feature. -->
+      <article>
+        <h2 id="fee-title">Fee Payment</h2>
+        <p>Pay your tuition and other fees securely online.</p>
+        <!-- No form here, just info -->
+      </article>
+    </section>
+
+    <!-- Counseling Booking Service -->
+    <section id="counseling-booking" aria-labelledby="counseling-title">
+      <article>
+        <h2 id="counseling-title">Counseling Booking</h2>
+        <p>Book a session with our professional counselors. All sessions are confidential.</p>
+        <!-- 
+          The form uses <label> for each input, which is best practice for accessibility.
+          aria-describedby gives extra context to screen readers.
+        -->
+        <form aria-label="Counseling Session Booking Form" aria-describedby="counseling-help">
+          <label for="student-name">Full Name:</label>
+          <input type="text" id="student-name" name="student-name" required>
+
+          <label for="student-id">Student ID:</label>
+          <input type="text" id="student-id" name="student-id" required>
+
+          <label for="session-date">Preferred Date:</label>
+          <input type="date" id="session-date" name="session-date" required>
+
+          <label for="session-type">Session Type:</label>
+          <select id="session-type" name="session-type" required>
+            <option value="">Select...</option>
+            <option value="individual">Individual</option>
+            <option value="group">Group</option>
+          </select>
+
+          <label for="notes">Additional Notes:</label>
+          <textarea id="notes" name="notes" rows="3" aria-label="Additional Notes"></textarea>
+
+          <button type="submit">Book Session</button>
+        </form>
+        <!-- 
+          <aside> is used for extra help/tips, not the main flow.
+        -->
+        <aside id="counseling-help" aria-live="polite">
+          <p>Need help? Email <a href="mailto:counseling@usiu.ac.ke">counseling@usiu.ac.ke</a> or call ext. 1234.</p>
+        </aside>
+      </article>
+    </section>
+
+    <!-- Transcript Request Service -->
+    <section id="transcript-request" aria-labelledby="transcript-title">
+      <article>
+        <h2 id="transcript-title">Transcript Request</h2>
+        <p>Request your official transcript for academic or professional purposes.</p>
+        <!-- No form, just info for now -->
+      </article>
+    </section>
+  </main>
+
+  <!-- 
+    <footer> is for site-wide info, like copyright.
+    role="contentinfo" helps screen readers know this is the end of the page.
+  -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 USIU–Africa. All rights reserved.</p>
+  </footer>
+</body>
+</html>

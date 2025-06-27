@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>USIU–Africa Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <!-- Simple style for a clean look -->
   <style>
     body {
       font-family: 'Roboto', Arial, sans-serif;
@@ -17,8 +17,30 @@
       min-height: 100vh;
       margin: 0;
     }
+    .logo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .logo-placeholder {
+      width: 70px;
+      height: 70px;
+      background: #ffd100;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: #003366;
+      font-weight: bold;
+      box-shadow: 0 2px 12px #00336622;
+      margin-bottom: 0.5rem;
+      /* This is just a placeholder. Replace src below with your real logo when ready! */
+    }
     h1 {
       margin-bottom: 1rem;
+      margin-top: 0;
     }
     a {
       display: inline-block;
@@ -38,6 +60,14 @@
   </style>
 </head>
 <body>
+  <!-- Logo Section -->
+  <div class="logo-section">
+    <!-- Placeholder logo: swap with your real logo image when ready -->
+    <div class="logo-placeholder" aria-label="USIU–Africa Logo">UA</div>
+    <!-- For a real logo, use:
+      <img src="path/to/logo.png" alt="USIU–Africa Logo" class="logo-placeholder">
+    -->
+  </div>
   <h1>Welcome to USIU–Africa Portal</h1>
   <p>Access all your student services below:</p>
   <a href="services.html">Go to Student Services</a>

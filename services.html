@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>USIU–Africa Student Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to the external CSS file -->
   <link rel="stylesheet" href="services.css">
-  
 </head>
 <body>
   <!-- 
-    <header> is for the page intro/title, so screen readers know what this page is about right away.
+    <header> for the site title and intro.
   -->
   <header>
     <h1 id="site-title">USIU–Africa Student Services Portal</h1>
@@ -17,8 +17,7 @@
   </header>
 
   <!-- 
-    <nav> is for navigation. 
-    We use role="navigation" and aria-label for screen readers.
+    <nav> for site navigation, with ARIA for accessibility.
   -->
   <nav role="navigation" aria-label="Student Services Navigation">
     <ul>
@@ -29,29 +28,73 @@
   </nav>
 
   <!-- 
-    <main> is the main content area.
-    Each service is a <section> with an <article> inside.
-    This makes it easy for screen readers to jump to each part.
+    <main> holds the main content.
   -->
   <main aria-labelledby="site-title">
-    <!-- Fee Payment Service -->
+
+    <!-- Fee Payment Section -->
     <section id="fee-payment" aria-labelledby="fee-title">
-      <!-- <article> is used because this is a stand-alone service feature. -->
       <article>
         <h2 id="fee-title">Fee Payment</h2>
-        <p>Pay your tuition and other fees securely online.</p>
-        <!-- No form here, just info -->
+        <p>
+          Pay your tuition and other university fees securely online or through our official banking partners. 
+          Please review the payment options below and ensure you use your correct Student ID as the payment reference.
+        </p>
+        <h3>Accepted Payment Methods</h3>
+        <ul>
+          <li><strong>Online Payment Portal:</strong> <a href="https://payments.usiu.ac.ke/" target="_blank" rel="noopener">USIU–Africa Online Payments</a></li>
+          <li><strong>Bank Deposit/Transfer:</strong> Use any of the official university bank accounts below.</li>
+          <li><strong>MPESA Paybill:</strong> Pay via MPESA using the university’s Paybill number.</li>
+        </ul>
+        <h3>Bank Account Details</h3>
+        <table>
+          <tr>
+            <th>Bank Name</th>
+            <th>Account Name</th>
+            <th>Account Number</th>
+            <th>Branch</th>
+          </tr>
+          <tr>
+            <td>Co-operative Bank of Kenya</td>
+            <td>USIU–Africa</td>
+            <td>01129143943900</td>
+            <td>Westlands</td>
+          </tr>
+          <tr>
+            <td>Commercial Bank of Africa</td>
+            <td>USIU–Africa</td>
+            <td>01100026026700</td>
+            <td>Wabera Street</td>
+          </tr>
+          <tr>
+            <td>Standard Chartered Bank</td>
+            <td>USIU–Africa</td>
+            <td>0102017174300</td>
+            <td>Westlands</td>
+          </tr>
+        </table>
+        <h3>MPESA Paybill</h3>
+        <ul>
+          <li><strong>Paybill Number:</strong> 516900</li>
+          <li><strong>Account Number:</strong> Your Student ID Number</li>
+        </ul>
+        <h3>Important Notes</h3>
+        <ul>
+          <li>Always use your Student ID as the payment reference.</li>
+          <li>Keep your payment receipt and upload it via the <a href="https://payments.usiu.ac.ke/receipt-upload" target="_blank" rel="noopener">Receipt Upload Portal</a>.</li>
+          <li>For any payment issues, contact the Finance Office at <a href="mailto:finance@usiu.ac.ke">finance@usiu.ac.ke</a> or call +254 730 116 444 / +254 730 116 445.</li>
+        </ul>
       </article>
     </section>
 
-    <!-- Counseling Booking Service -->
+    <!-- Counseling Booking Section -->
     <section id="counseling-booking" aria-labelledby="counseling-title">
       <article>
         <h2 id="counseling-title">Counseling Booking</h2>
         <p>Book a session with our professional counselors. All sessions are confidential.</p>
         <!-- 
-          The form uses <label> for each input, which is best practice for accessibility.
-          aria-describedby gives extra context to screen readers.
+          Form uses <label> for each input for accessibility.
+          aria-describedby gives extra context for screen readers.
         -->
         <form aria-label="Counseling Session Booking Form" aria-describedby="counseling-help">
           <label for="student-name">Full Name:</label>
@@ -76,27 +119,51 @@
           <button type="submit">Book Session</button>
         </form>
         <!-- 
-          <aside> is used for extra help/tips, not the main flow.
+          <aside> for extra help/tips, not the main flow.
         -->
         <aside id="counseling-help" aria-live="polite">
-          <p>Need help? Email <a href="mailto:counseling@usiu.ac.ke">counseling@usiu.ac.ke</a> or call ext. 1234.</p>
+          <p>
+            Need help? Email <a href="mailto:counseling@usiu.ac.ke">counseling@usiu.ac.ke</a> 
+            or call +254 730 116 766 / +254 730 116 767.
+          </p>
         </aside>
       </article>
     </section>
 
-    <!-- Transcript Request Service -->
+    <!-- Transcript Request Section -->
     <section id="transcript-request" aria-labelledby="transcript-title">
       <article>
         <h2 id="transcript-title">Transcript Request</h2>
-        <p>Request your official transcript for academic or professional purposes.</p>
-        <!-- No form, just info for now -->
+        <p>
+          Request your official USIU–Africa transcript for academic, professional, or personal use. 
+          Transcripts can be reviewed online before submitting your request and are available for download in official PDF format.
+        </p>
+        <h3>How to Request Your Transcript</h3>
+        <ol>
+          <li>Log in to your <a href="https://studentportal.usiu.ac.ke/" target="_blank" rel="noopener">USIU–Africa Student Portal</a>.</li>
+          <li>Navigate to <strong>Academics &gt; Transcripts</strong>.</li>
+          <li>Review your unofficial transcript for accuracy.</li>
+          <li>Click <strong>Request Official Transcript</strong> and fill out the required form.</li>
+          <li>Pay the transcript processing fee via the <a href="#fee-payment">Fee Payment</a> section.</li>
+          <li>Once processed, you will receive an email with a secure download link.</li>
+        </ol>
+        <h3>Download Sample Transcript (PDF)</h3>
+        <p>
+          <a href="https://www.usiu.ac.ke/assets/sample-transcript.pdf" target="_blank" rel="noopener">
+            Download Official Transcript (Sample PDF)
+          </a>
+        </p>
+        <h3>Transcript Office Contacts</h3>
+        <ul>
+          <li>Email: <a href="mailto:registrar@usiu.ac.ke">registrar@usiu.ac.ke</a></li>
+          <li>Phone: +254 730 116 218 / +254 730 116 219</li>
+        </ul>
       </article>
     </section>
   </main>
 
   <!-- 
-    <footer> is for site-wide info, like copyright.
-    role="contentinfo" helps screen readers know this is the end of the page.
+    <footer> for site-wide info.
   -->
   <footer role="contentinfo">
     <p>&copy; 2025 USIU–Africa. All rights reserved.</p>

@@ -173,4 +173,26 @@ footer {
   table, th, td {
     font-size: 0.95rem;
   }
+
+  /* 11. Back to Home Button */
+.back-home-btn {
+  display: inline-block;
+  margin: 1.5rem 0 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
+  background: #ffd100;
+  color: #003366;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: background 0.2s, color 0.2s;
+  border: 2px solid #003366;
+}
+.back-home-btn:hover,
+.back-home-btn:focus {
+  background: #003366;
+  color: #ffd100;
+  outline: none;
+}
 }

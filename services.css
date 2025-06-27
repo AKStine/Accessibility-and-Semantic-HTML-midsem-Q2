@@ -74,12 +74,33 @@ section h2 {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
+section h3 {
+  color: #00529b;
+  margin-bottom: 0.5rem;
+  margin-top: 1.2rem;
+}
 section p {
   margin-top: 0;
   margin-bottom: 1.2rem;
 }
 
-/* 6. Counseling Booking Form */
+/* 6. Table Styling (for Fee Payment) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+th {
+  background: #e3ecfa;
+  color: #003366;
+}
+
+/* 7. Counseling Booking Form */
 form {
   display: flex;
   flex-direction: column;
@@ -114,7 +135,7 @@ button[type="submit"]:hover, button[type="submit"]:focus {
   color: #003366;
 }
 
-/* 7. Aside (Help Box) */
+/* 8. Aside (Help Box) */
 aside {
   background: #e3ecfa;
   color: #003366;
@@ -125,7 +146,7 @@ aside {
   font-size: 1rem;
 }
 
-/* 8. Footer */
+/* 9. Footer */
 footer {
   background: #003366;
   color: #ffd100;
@@ -136,7 +157,7 @@ footer {
   border-radius: 0 0 8px 8px;
 }
 
-/* 9. Responsive Design */
+/* 10. Responsive Design */
 @media (max-width: 600px) {
   header, main, section, aside, nav {
     padding-left: 0.5rem;
@@ -148,5 +169,8 @@ footer {
   }
   section {
     padding: 1rem 0.5rem;
+  }
+  table, th, td {
+    font-size: 0.95rem;
   }
 }

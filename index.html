@@ -24,30 +24,26 @@
       margin-bottom: 1.5rem;
     }
     .logo-link {
-      text-decoration: none;
+      display: inline-block;
       outline: none;
+      margin-bottom: 0.5rem;
     }
-    .logo-placeholder {
+    .logo-img {
       width: 180px;
       height: 80px;
-      /*background: #ffd100;
-      border: 4px solid #003366;
-      border-radius: 50%;*/
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      color: #003366;
-      font-weight: 900;
+      object-fit: contain;
+      display: block;
+      /* Optional: subtle shadow for depth */
       box-shadow: 0 4px 16px #00336622;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.05em;
-      user-select: none;
-      transition: box-shadow 0.2s;
+      background: #fff;
+      border-radius: 12px;
+      border: 2px solid #ffd100;
+      transition: box-shadow 0.2s, border-color 0.2s;
     }
-    .logo-link:focus .logo-placeholder,
-    .logo-placeholder:active {
+    .logo-link:focus .logo-img,
+    .logo-img:active {
       box-shadow: 0 0 0 4px #ffd10088;
+      border-color: #003366;
       outline: none;
     }
     h1 {
@@ -73,15 +69,15 @@
   </style>
 </head>
 <body>
-  <!-- Logo Section with clickable placeholder logo -->
+  <!-- Logo Section with clickable logo image -->
   <div class="logo-section">
     <!-- 
       The logo is a link for branding or navigation.
+      You can set href to your homepage or the official USIU–Africa site.
     -->
-    <img src="https://github.com/AKStine/Accessibility-and-Semantic-HTML-midsem-Q2/blob/main/USIU-A_LOGO.png?raw=true" alt="USIU–Africa Logo" target="_blank" rel="noopener" class="logo-link" aria-label="USIU–Africa Home">
-      <span class="logo-placeholder"> </span>
-    <!-- <a href="https://github.com/AKStine/Accessibility-and-Semantic-HTML-midsem-Q2/blob/main/USIU-A_LOGO.png?raw=true" target="_blank" rel="noopener" class="logo-link" aria-label="USIU–Africa Home">
-      <span class="logo-placeholder">USIU-Africa</span> -->
+    <a href="https://www.usiu.ac.ke/" target="_blank" rel="noopener" class="logo-link" aria-label="USIU–Africa Home">
+      <img src="https://github.com/AKStine/Accessibility-and-Semantic-HTML-midsem-Q2/blob/main/USIU-A_LOGO.png?raw=true" 
+           alt="USIU–Africa Logo" class="logo-img">
     </a>
   </div>
   <h1>Welcome to USIU–Africa Portal</h1>

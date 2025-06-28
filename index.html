@@ -33,17 +33,15 @@
       height: 80px;
       object-fit: contain;
       display: block;
-      /* Optional: subtle shadow for depth */
-      box-shadow: 0 4px 16px #00336622;
       background: #fff;
       border-radius: 12px;
-      border: 2px solid #ffd100;
+      /* Removed border: 2px solid #ffd100; */
+      box-shadow: 0 4px 16px #00336622;
       transition: box-shadow 0.2s, border-color 0.2s;
     }
     .logo-link:focus .logo-img,
     .logo-img:active {
       box-shadow: 0 0 0 4px #ffd10088;
-      border-color: #003366;
       outline: none;
     }
     h1 {
@@ -71,10 +69,6 @@
 <body>
   <!-- Logo Section with clickable logo image -->
   <div class="logo-section">
-    <!-- 
-      The logo is a link for branding or navigation.
-      You can set href to your homepage or the official USIU–Africa site.
-    -->
     <a href="https://www.usiu.ac.ke/" target="_blank" rel="noopener" class="logo-link" aria-label="USIU–Africa Home">
       <img src="https://github.com/AKStine/Accessibility-and-Semantic-HTML-midsem-Q2/blob/main/USIU-A_LOGO.png?raw=true" 
            alt="USIU–Africa Logo" class="logo-img">
